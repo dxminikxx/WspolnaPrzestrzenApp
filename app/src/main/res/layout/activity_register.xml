@@ -23,60 +23,75 @@
         app:layout_constraintTop_toTopOf="parent">
     </TextView>
 
-    <TextView
-        android:id="@+id/person_name"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
         android:ems="10"
-        android:background="@drawable/bg"
-        android:hint="User name"
+        android:textSize="16sp"
         android:inputType="textPersonName"
-        android:textColor="@color/grey_light"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:paddingTop="10dp"
+        android:hint="User name"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/grey"
         android:paddingLeft="15dp"
+        android:background="@drawable/bg"
+        android:drawableLeft="@drawable/person"
+        android:drawablePadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_txt">
-    </TextView>
+        app:layout_constraintTop_toTopOf="@id/register_txt"
+        app:layout_constraintVertical_bias="0.141">
 
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
+    </EditText>
+
+    <EditText
+        android:id="@+id/UserPassword"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bg"
-        android:inputType="textPassword"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="8dp"
+        android:ems="10"
         android:hint="Password"
-        android:textColor="@color/grey_light"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:paddingTop="10dp"
+        android:inputType="textPassword"
         android:paddingLeft="15dp"
+        android:text="Password"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/person_name" />
+        app:layout_constraintTop_toTopOf="@id/UserName"
+        app:layout_constraintVertical_bias="0.132">
 
-    <TextView
-        android:id="@+id/password_second"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+    </EditText>
+
+    <EditText
+        android:id="@+id/UserPasswordSecond"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:background="@drawable/bg"
         android:inputType="textPassword"
-        android:hint="Confirm password"
-        android:textColor="@color/grey_light"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:paddingTop="10dp"
+        android:textSize="16sp"
+        android:text="Password"
+        android:hint="Password"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/grey"
         android:paddingLeft="15dp"
+        android:background="@drawable/bg"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toTopOf="@id/UserPassword"
+        app:layout_constraintVertical_bias="0.141">
+
+    </EditText>
 
     <Button
         android:id="@+id/button"
@@ -86,11 +101,11 @@
         android:text="Register"
         android:textStyle="bold"
         android:textSize="16sp"
-        android:textColor="@color/lime"
-        android:background="@drawable/btns"
+        android:textColor="@color/black"
+        android:background="@drawable/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_second">
+        app:layout_constraintTop_toBottomOf="@id/UserPasswordSecond">
 
     </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>
