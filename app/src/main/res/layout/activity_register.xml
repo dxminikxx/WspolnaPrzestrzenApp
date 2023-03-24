@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/register_txt"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="130dp"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textColor="@color/emerald"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/person_name"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:background="@drawable/bg"
+        android:hint="User name"
+        android:inputType="textPersonName"
+        android:textColor="@color/grey_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_txt">
+    </TextView>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:background="@drawable/bg"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:textColor="@color/grey_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_name" />
+
+    <TextView
+        android:id="@+id/password_second"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:background="@drawable/bg"
+        android:inputType="textPassword"
+        android:hint="Confirm password"
+        android:textColor="@color/grey_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/lime"
+        android:background="@drawable/btns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_second">
+
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
