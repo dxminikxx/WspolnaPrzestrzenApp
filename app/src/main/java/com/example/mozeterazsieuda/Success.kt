@@ -1,11 +1,32 @@
-package com.example.mozeterazsieuda
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import com.example.mozeterazsieuda.HomeFragment
+import com.example.mozeterazsieuda.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Success : AppCompatActivity() {
+    private lateinit var navigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success)
+
+        navigationView = findViewById(R.id.bottom_navigation)
+        supportFragmentManager.beginTransaction().replace(R.id.fl_wrapper, HomeFragment()).commit()
+        navigationView.selectedItemId = R.id.nav_home
+
+        navigationView.setOnNavigationItemSelectedListener { item ->
+            var fragment: Fragment? = null
+            when (item.itemId) {
+                R.id.nav_home -> fragment = HomeFragment()
+            }
+
+            if (fragment != null) {
+                supportFragmentManager.beginTransaction().replace(R.id.fl_wrapper, fragment).commit()
+                return@setOnNavigationItemSelectedListener true
+            }
+            return@setOnNavigationItemSelectedListener false
+        }
     }
 }
