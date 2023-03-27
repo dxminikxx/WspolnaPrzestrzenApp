@@ -1,5 +1,8 @@
+package com.example.mozeterazsieuda
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import com.example.mozeterazsieuda.HomeFragment
 import com.example.mozeterazsieuda.R
@@ -12,6 +15,8 @@ class Success : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success)
 
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         navigationView = findViewById(R.id.bottom_navigation)
         supportFragmentManager.beginTransaction().replace(R.id.fl_wrapper, HomeFragment()).commit()
         navigationView.selectedItemId = R.id.nav_home
@@ -20,7 +25,11 @@ class Success : AppCompatActivity() {
             var fragment: Fragment? = null
             when (item.itemId) {
                 R.id.nav_home -> fragment = HomeFragment()
+                R.id.nav_calendar -> fragment = CalendarFragment()
+                R.id.nav_contact_list -> fragment = ContactFragment()
+                R.id.nav_settings -> fragment = SettingsFragment()
             }
+
 
             if (fragment != null) {
                 supportFragmentManager.beginTransaction().replace(R.id.fl_wrapper, fragment).commit()
@@ -28,5 +37,6 @@ class Success : AppCompatActivity() {
             }
             return@setOnNavigationItemSelectedListener false
         }
+
     }
 }

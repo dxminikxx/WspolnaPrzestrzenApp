@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CalendarFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Calendar"
+        android:textColor="@color/emerald"
+        android:textSize="30sp">
+    </TextView>
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/beige"
+        android:theme="@style/CalendarViewCustom"
+        android:dateTextAppearance="@style/CalenderViewDateCustomText"
+        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"/>
+
+    <EditText
+        android:layout_width="231dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btns"
+        android:paddingLeft="20dp"
+        android:text="Event name"
+        android:textSize="16sp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="70dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:background="@drawable/btn"
+        android:layout_marginTop="510dp"
+        android:layout_marginLeft="140dp">
+    </Button>
+</RelativeLayout>

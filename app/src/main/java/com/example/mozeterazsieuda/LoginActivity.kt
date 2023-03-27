@@ -7,6 +7,9 @@ import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.mozeterazsieuda.R
+import com.example.mozeterazsieuda.Success
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -46,3 +49,4 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
+
