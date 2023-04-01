@@ -12,6 +12,9 @@
         android:theme="@style/Theme.MozeTerazSieUda"
         tools:targetApi="31">
         <activity
+            android:name=".AddEventAcivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
