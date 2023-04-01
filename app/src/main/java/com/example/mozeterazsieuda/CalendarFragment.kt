@@ -7,9 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CalendarView
-import android.widget.TextView
-import com.example.mozeterazsieuda.DBHelper
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class CalendarFragment : Fragment() {
 
-    private lateinit var btnAddEvent: Button
+    private lateinit var btn_addEvent: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,9 +28,9 @@ class CalendarFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_calendar, container, false)
 
-        btnAddEvent = view.findViewById(R.id.btn_addEvent)
-        btnAddEvent.setOnClickListener {
-            val intent = Intent(activity, AddEventAcivity::class.java)
+        btn_addEvent = view.findViewById(R.id.btn_addEvent)
+        btn_addEvent.setOnClickListener {
+            val intent = Intent(activity, AddEventActivity::class.java)
             startActivity(intent)
         }
 

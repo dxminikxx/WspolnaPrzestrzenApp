@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddEventActivity">
+
+    <TextView
+        android:id="@+id/header_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW EVENT"
+        android:textStyle="italic|bold"
+        android:textColor="@color/emerald"
+        android:layout_marginTop="70dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <EditText
+        android:id="@+id/EventName"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:textSize="16sp"
+        android:inputType="textPersonName"
+        android:hint="User name"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/grey"
+        android:paddingLeft="15dp"
+        android:background="@drawable/bg"
+        android:drawablePadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_event"
+        app:layout_constraintVertical_bias="0.141">
+    </EditText>
+
+
+    <EditText
+        android:id="@+id/EventDate"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:textSize="16sp"
+        android:hint="Date"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/grey"
+        android:paddingLeft="15dp"
+        android:background="@drawable/bg"
+        android:drawablePadding="8dp"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/EventName"
+        app:layout_constraintVertical_bias="0.141">
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddEvent"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Add event"
+        android:background="@drawable/btns"
+        android:layout_marginBottom="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/EventDate">
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
