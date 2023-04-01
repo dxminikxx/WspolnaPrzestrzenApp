@@ -18,7 +18,7 @@
     </TextView>
 
     <CalendarView
-        android:id="@+id/calendarView2"
+        android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -30,24 +30,14 @@
         android:dateTextAppearance="@style/CalenderViewDateCustomText"
         android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"/>
 
-    <EditText
-        android:layout_width="231dp"
-        android:layout_height="50dp"
-        android:background="@drawable/btns"
-        android:paddingLeft="20dp"
-        android:text="Event name"
-        android:textSize="16sp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginTop="450dp"
-        android:layout_marginLeft="70dp"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="Add event"
+        android:textColor="@color/black"
         android:background="@drawable/btn"
-        android:layout_marginTop="510dp"
-        android:layout_marginLeft="140dp">
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="110dp">
     </Button>
 </RelativeLayout>
