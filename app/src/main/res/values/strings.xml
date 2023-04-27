@@ -4,4 +4,15 @@
     <string name="sub_title">Nice to meet you! Come join our community!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_text">
+    We want help your
+    neighborhood improve life!
+    </string>
+
+    <string name="functionality">
+    You can add announcements to the notice board,
+    check the calendar of events,
+    have quick access to the contacts you need
+    and much more!
+    </string>
 </resources>

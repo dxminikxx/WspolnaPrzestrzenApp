@@ -7,73 +7,121 @@
     android:background="@color/white"
     tools:context=".AddEventActivity">
 
-    <TextView
-        android:id="@+id/header_event"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD NEW EVENT"
-        android:textStyle="italic|bold"
-        android:textColor="@color/emerald"
-        android:layout_marginTop="70dp"
-        android:textSize="24sp"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fifth"
+        tools:ignore="MissingConstraints">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/header_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="New event"
+        android:textAlignment="center"
+        android:textColor="@color/emerald"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
         app:layout_constraintTop_toTopOf="parent">
+
     </TextView>
 
     <EditText
-        android:id="@+id/EventName"
+        android:id="@+id/eventName"
         android:layout_width="211dp"
         android:layout_height="51dp"
+        android:background="@drawable/bg"
+        android:drawableLeft="@drawable/event_note"
+        android:drawablePadding="8dp"
         android:ems="10"
-        android:textSize="16sp"
+        android:hint="Event name"
         android:inputType="textPersonName"
-        android:hint="User name"
-        android:textColorHint="@color/grey"
-        android:textColor="@color/grey"
         android:paddingLeft="15dp"
-        android:background="@drawable/bg"
-        android:drawablePadding="8dp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        android:fontFamily="@font/comfortaa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/header_event"
-        app:layout_constraintVertical_bias="0.141">
+        app:layout_constraintTop_toTopOf="@id/header_login"
+        app:layout_constraintVertical_bias="0.18">
+
     </EditText>
 
-
-    <EditText
-        android:id="@+id/EventDate"
+    <Button
+        android:id="@+id/eventDate"
         android:layout_width="211dp"
         android:layout_height="51dp"
-        android:ems="10"
-        android:textSize="16sp"
-        android:hint="Date"
-        android:textColorHint="@color/grey"
-        android:textColor="@color/grey"
-        android:paddingLeft="15dp"
         android:background="@drawable/bg"
+        android:drawableLeft="@drawable/calendar"
         android:drawablePadding="8dp"
-        android:focusable="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/EventName"
-        app:layout_constraintVertical_bias="0.141">
-    </EditText>
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:hint="Event date"
+        android:paddingLeft="15dp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        android:textAlignment="textStart"
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnAddEvent"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="Add event"
-        android:background="@drawable/btns"
-        android:layout_marginBottom="240dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/EventDate">
-    </androidx.appcompat.widget.AppCompatButton>
+        app:layout_constraintTop_toTopOf="@id/eventName"
+        app:layout_constraintVertical_bias="0.182">
+
+    </Button>
+
+    <Button
+        android:id="@+id/eventHour"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
+        android:background="@drawable/bg"
+        android:drawableLeft="@drawable/time"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:hint="Event hour"
+        android:paddingLeft="15dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/eventDate"
+        app:layout_constraintVertical_bias="0.23">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gradient_btn"
+        android:fontFamily="@font/comfortaa"
+        android:text="Add event"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/eventHour"
+        app:layout_constraintVertical_bias="0.377" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

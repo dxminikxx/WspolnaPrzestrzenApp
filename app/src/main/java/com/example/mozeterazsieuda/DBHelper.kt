@@ -3,22 +3,32 @@ package com.example.mozeterazsieuda
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.util.*
+import kotlin.collections.ArrayList
 
 class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) {
 
     private val TABLE_EVENTS = "EventLIST"
+    companion object {
+        const val TABLE_ANNOUNCEMENT = "table_announcement"
+    }
     override fun onCreate(p0: SQLiteDatabase?) {
-        p0?.execSQL("create table Userdata (username TEXT primary key, password TEXT)")
+        p0?.execSQL("create table UserData (username TEXT primary key, password TEXT)")
         //create event table
         p0?.execSQL("create table $TABLE_EVENTS (id INTEGER primary key autoincrement, event_name TEXT, date TEXT, hour TEXT)")
+        //create announcement table
+        p0?.execSQL("create table $TABLE_ANNOUNCEMENT (id INTEGER primary key autoincrement, announcement_name TEXT, date STRING)")
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         p0?.execSQL("drop table if exists Userdata ")
         //drop event table
         p0?.execSQL("drop table if exists $TABLE_EVENTS ")
+        //drop announcement table
+//        p0?.execSQL("drop table if exists $TABLE_ANNOUNCEMENT")
     }
 
     fun instertdata(username: String, password: String): Boolean{
@@ -34,7 +44,7 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) 
     }
 
     //method added information about new event
-    fun insterEventData(eventName: String, date: String, hour: String): Boolean{
+    fun insertEventData(eventName: String, date: String, hour: String): Boolean{
         val p0 = this.writableDatabase
         val cv = ContentValues()
         cv.put("event_name", eventName)
@@ -45,6 +55,44 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) 
             return false
         }
         return true
+    }
+
+    fun insertAnnouncement(announcement_name: String, date: String):Boolean{
+        val db = this.writableDatabase
+        val cv = ContentValues()
+        cv.put("announcement_name", announcement_name)
+        cv.put("date", date)
+        val result = db.insert(TABLE_ANNOUNCEMENT, null, cv)
+        if (result==-1 .toLong()){
+            return false
+        }
+        return true
+    }
+
+    @SuppressLint("Range")
+    fun getAllAnnouncement() : ArrayList<AnnouncementFragment>{
+        val announcementList: ArrayList<AnnouncementFragment> = ArrayList()
+        val selectQuery = "select * from $TABLE_ANNOUNCEMENT"
+        val db = this.readableDatabase
+
+        val cursor: Cursor?
+        try{
+            cursor = db.rawQuery(selectQuery, null)
+        }catch(e: Exception){
+            e.printStackTrace()
+            db.execSQL(selectQuery)
+            return ArrayList()
+        }
+
+        if(cursor.moveToFirst()){
+            do{
+                val announcementName = cursor.getString(cursor.getColumnIndex("announcement_name"))
+                val date = cursor.getString(cursor.getColumnIndex("date"))
+                val announcement = AnnouncementFragment(announcement_name = announcementName, date = date)
+                announcementList.add(announcement)
+            }while(cursor.moveToNext())
+        }
+        return announcementList
     }
 
     fun checkuserpass(username: String, password: String):Boolean{

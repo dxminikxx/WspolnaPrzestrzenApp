@@ -28,6 +28,7 @@ class Success : AppCompatActivity() {
                 R.id.nav_calendar -> fragment = CalendarFragment()
                 R.id.nav_contact_list -> fragment = ContactFragment()
                 R.id.nav_settings -> fragment = SettingsFragment()
+                R.id.nav_announcement -> fragment = AnnouncementFragment()
             }
 
 

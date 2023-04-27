@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AnnouncementFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="@color/emerald"
+        android:textSize="30dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Announcement board"/>
+
+    <EditText
+        android:id="@+id/announcementName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:hint="Name">
+    </EditText>
+
+    <EditText
+        android:id="@+id/announcementDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:hint="Date">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnAddAnnouncement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_btn"
+            android:text="ADD"
+            android:textColor="@color/white"
+            android:fontFamily="@font/comfortaa"
+            android:textAllCaps="false">
+        </Button>
+
+        <Button
+            android:id="@+id/btnViewAnnouncement"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_btn"
+            android:text="VIEW"
+            android:textColor="@color/white"
+            android:fontFamily="@font/comfortaa"
+            android:textAllCaps="false">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
