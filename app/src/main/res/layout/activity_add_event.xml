@@ -121,7 +121,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/eventHour"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintVertical_bias="0.377"
+        android:onClick="sendEventButtonClicked"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

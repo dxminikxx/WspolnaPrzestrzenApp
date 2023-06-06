@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".AnnouncementFragment">
+    android:tooltipText=".AnnouncementFragment">
 
-    <TextView
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -21,24 +20,28 @@
 
     <EditText
         android:id="@+id/announcementName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="336dp"
+        android:layout_height="70dp"
         android:layout_margin="30dp"
-        android:textColor="@color/black"
         android:backgroundTint="@color/black"
-        android:hint="Name">
+        android:hint="Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey">
     </EditText>
 
     <EditText
         android:id="@+id/announcementDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="336dp"
+        android:layout_height="58dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:textColor="@color/black"
         android:backgroundTint="@color/black"
-        android:hint="Date">
+        android:drawableLeft="@drawable/calendar"
+        android:drawablePadding="8dp"
+        android:hint="Date"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey">
     </EditText>
 
     <LinearLayout

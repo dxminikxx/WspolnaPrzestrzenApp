@@ -25,11 +25,11 @@ class ContactFragment : Fragment() {
         )
 
         val name = arrayOf(
-            "Administrator osiedla",
-            "Radny osiedlowy",
-            "Pogotowie energetyczne",
-            "Komunikacja miejska",
-            "Poczta"
+            "Estate administrator",
+            "Neighborhood councillor",
+            "Energy emergency",
+            "Public transport",
+            "Post office"
         )
 
         val phoneNumber = arrayOf(

@@ -4,6 +4,383 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".SurveyActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/title_survey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/survey"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/emerald"
+            android:fontFamily="@font/comfortaa"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+        </TextView>
+
+        <TextView
+            android:id="@+id/second_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/survey2"
+            android:textColor="@color/lime"
+            android:textSize="20sp"
+            android:fontFamily="@font/charmonman"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_survey" />
+
+        <TextView
+            android:id="@+id/first_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="30dp"
+            android:text="@string/first_question"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/second_title"
+            app:layout_constraintVertical_bias="0.141">
+        </TextView>
+
+        <RadioButton
+            android:id="@+id/RadioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:buttonTint="@color/emerald"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="10dp"
+            android:text="Yes"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/first_question"
+            app:layout_constraintTop_toTopOf="@+id/first_question"
+            app:layout_constraintVertical_bias="0.081" />
+
+        <RadioButton
+            android:id="@+id/RadioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="10dp"
+            android:text="No"
+            android:buttonTint="@color/emerald"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RadioButton1"
+            app:layout_constraintVertical_bias="0.112" />
+
+        <RadioButton
+            android:id="@+id/RadioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="10dp"
+            android:text="I don't have an opinion."
+            android:buttonTint="@color/emerald"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/RadioButton2"
+            app:layout_constraintTop_toTopOf="@+id/RadioButton2"
+            app:layout_constraintVertical_bias="0.126" />
+
+        <TextView
+            android:id="@+id/second_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="30dp"
+            android:text="@string/second_question"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/RadioButton3"
+            app:layout_constraintVertical_bias="0.0">
+        </TextView>
+
+        <RadioButton
+            android:id="@+id/RadioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:buttonTint="@color/emerald"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="10dp"
+            android:text="Yes"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/second_question"
+            app:layout_constraintTop_toTopOf="@+id/second_question"
+            app:layout_constraintVertical_bias="0.16" />
+
+        <RadioButton
+            android:id="@+id/RadioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="10dp"
+            android:text="No"
+            android:buttonTint="@color/emerald"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RadioButton4"
+            app:layout_constraintVertical_bias="0.23" />
+
+        <RadioButton
+            android:id="@+id/RadioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="10dp"
+            android:text="I don't have an opinion."
+            android:buttonTint="@color/emerald"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/RadioButton5"
+            app:layout_constraintTop_toTopOf="@+id/RadioButton5"
+            app:layout_constraintVertical_bias="0.30" />
+
+
+            <TextView
+                android:id="@+id/third_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="30dp"
+                android:text="@string/third_question"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/second_title"
+                app:layout_constraintVertical_bias="0.141">
+            </TextView>
+
+            <RadioButton
+                android:id="@+id/RadioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:buttonTint="@color/emerald"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/first_question"
+                app:layout_constraintTop_toTopOf="@+id/first_question"
+                app:layout_constraintVertical_bias="0.081" />
+
+            <RadioButton
+                android:id="@+id/RadioButton8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="No"
+                android:buttonTint="@color/emerald"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/RadioButton7"
+                app:layout_constraintVertical_bias="0.112" />
+
+            <RadioButton
+                android:id="@+id/RadioButton9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="I don't have an opinion."
+                android:buttonTint="@color/emerald"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/RadioButton8"
+                app:layout_constraintTop_toTopOf="@+id/RadioButton8"
+                app:layout_constraintVertical_bias="0.126" />
+
+            <TextView
+                android:id="@+id/fourth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="30dp"
+                android:text="@string/fourth_question"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/second_title"
+                app:layout_constraintVertical_bias="0.141">
+            </TextView>
+
+            <RadioButton
+                android:id="@+id/RadioButton10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:buttonTint="@color/emerald"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/first_question"
+                app:layout_constraintTop_toTopOf="@+id/first_question"
+                app:layout_constraintVertical_bias="0.081" />
+
+            <RadioButton
+                android:id="@+id/RadioButton11"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="No"
+                android:buttonTint="@color/emerald"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/RadioButton10"
+                app:layout_constraintVertical_bias="0.112" />
+
+            <RadioButton
+                android:id="@+id/RadioButton12"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="I don't have an opinion."
+                android:buttonTint="@color/emerald"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/RadioButton11"
+                app:layout_constraintTop_toTopOf="@+id/RadioButton11"
+                app:layout_constraintVertical_bias="0.126" />
+
+            <TextView
+                android:id="@+id/fifth_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="30dp"
+                android:text="@string/fifth_question"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/second_title"
+                app:layout_constraintVertical_bias="0.141">
+            </TextView>
+
+            <RadioButton
+                android:id="@+id/RadioButton13"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:buttonTint="@color/emerald"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/first_question"
+                app:layout_constraintTop_toTopOf="@+id/first_question"
+                app:layout_constraintVertical_bias="0.081" />
+
+            <RadioButton
+                android:id="@+id/RadioButton14"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="No"
+                android:buttonTint="@color/emerald"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/RadioButton13"
+                app:layout_constraintVertical_bias="0.112" />
+
+            <RadioButton
+                android:id="@+id/RadioButton15"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/comfortaa"
+                android:paddingLeft="10dp"
+                android:text="I don't have an opinion."
+                android:buttonTint="@color/emerald"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/RadioButton14"
+                app:layout_constraintTop_toTopOf="@+id/RadioButton14"
+                app:layout_constraintVertical_bias="0.126" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn"
+                android:fontFamily="@font/comfortaa"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="100dp"
+                android:text="Send"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:onClick="sendButtonClicked"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

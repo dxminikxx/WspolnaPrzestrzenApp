@@ -1,27 +1,29 @@
 package com.example.mozeterazsieuda
 
+import EventDBHelper
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.DatePicker
-import android.widget.EditText
+import android.widget.*
 import java.util.*
-import android.widget.Button
-import android.widget.TextView
 import java.text.SimpleDateFormat
 
 class AddEventActivity : AppCompatActivity() {
 
     private lateinit var  btnDatePicker: Button
     private lateinit var  btnTimePicker : Button
+    private lateinit var eventDBHelper: EventDBHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_event)
 
         btnDatePicker = findViewById(R.id.eventDate)
         btnTimePicker = findViewById(R.id.eventHour)
+        eventDBHelper = EventDBHelper(this)
 
         val myCalendar = Calendar.getInstance()
 
@@ -44,9 +46,20 @@ class AddEventActivity : AppCompatActivity() {
             val startMinute = currentTime.get(Calendar.MINUTE)
 
             TimePickerDialog(this, TimePickerDialog.OnTimeSetListener{
-                view, hourOfDay, minute ->
+                    view, hourOfDay, minute ->
                 btnTimePicker.setText("$hourOfDay:$minute")
             }, startHour, startMinute, false).show()
+        }
+    }
+
+    fun sendEventButtonClicked(view: View) {
+        val success = eventDBHelper.addEvent("Nazwa eventu", "Data", "Godzina")
+
+        if (success) {
+            startActivity(intent)
+            Toast.makeText(this, "Poprawnie dodano event", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Wystąpił błąd podczas dodawania eventu", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -55,6 +68,4 @@ class AddEventActivity : AppCompatActivity() {
         val sdf = SimpleDateFormat(myFormat, Locale.UK)
         btnDatePicker.setText(sdf.format(myCalendar.time))
     }
-
-
 }

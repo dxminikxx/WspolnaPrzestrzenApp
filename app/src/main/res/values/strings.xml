@@ -2,7 +2,6 @@
     <string name="app_name">MozeTerazSieUda</string>
     <string name="header_title">Welcome!</string>
     <string name="sub_title">Nice to meet you! Come join our community!</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_text">
     We want help your
@@ -15,4 +14,24 @@
     have quick access to the contacts you need
     and much more!
     </string>
+
+    <string name="survey">
+    We invite you to complete
+    the survey
+    </string>
+
+    <string name="survey2">
+    help us improve your estate!
+    </string>
+
+    <string name="first_question">Do you think that the infrastructure in the neighborhood is sufficient?</string>
+    <string name="second_question">Would you like to have more attractions in the neighborhood?</string>
+    <string name="third_question">Is the availability of public transportation in the neighborhood adequate for your needs?</string>
+    <string name="fourth_question">Are there any noise-related issues in the neighborhood that bother you?</string>
+    <string name="fifth_question">Do you have easy access to healthcare facilities in the neighborhood?</string>
+
+    <string name="thanks">for completing the survey!</string>
+
+    <string name="scroll_view_description">Scrollable content for the survey questions</string>
+
 </resources>

@@ -12,6 +12,9 @@
         android:theme="@style/Theme.MozeTerazSieUda"
         tools:targetApi="31">
         <activity
+            android:name=".SuccessSurvey"
+            android:exported="false" />
+        <activity
             android:name=".ProblemsActivity"
             android:exported="false" />
         <activity
@@ -26,9 +29,9 @@
         <activity
             android:name=".AddEventActivity"
             android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".HomeActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".Success"
             android:exported="false" />
